@@ -41,12 +41,6 @@
         tools:layout_editor_absoluteX="745dp"
         tools:layout_editor_absoluteY="-51dp" />
 
-            <ImageView
-                android:id="@+id/imageView3"
-                android:layout_width="match_parent"
-                android:layout_height="100sp"
-                app:srcCompat="@mipmap/ic_launcher" />
-
         </LinearLayout>
 
     </ScrollView>
