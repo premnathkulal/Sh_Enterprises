@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.example.sh_enterprises">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.sh_enterprises">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -10,9 +11,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
+        <activity android:name=".categories"></activity>
+        <activity
+            android:name=".Home_page"
+            android:label="@string/title_activity_home_page"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Notes_List" />
-
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

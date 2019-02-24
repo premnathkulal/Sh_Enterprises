@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void clickMe(View view) {
-        Intent i = new Intent(this,Notes_List.class);
+        Intent i = new Intent(this,Home_page.class);
         startActivity(i);
     }
 }

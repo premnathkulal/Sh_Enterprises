@@ -45,10 +45,7 @@ public class DatatAdapter extends RecyclerView.Adapter<DatatAdapter.ProductViewH
 
         holder.pro_name.setText(product.getPro_name());
         holder.weight.setText("WEIGHT : "+product.getWeight());
-        holder.sold.setText("SOLD BY:"+product.getSold_by());
-        holder.delto.setText("DELIVER TO :"+product.getDeliveryto());
         holder.ammount.setText(product.getTotal_amount()+"Rs");
-        holder.disc.setText("MARGIN : :"+product.getDisc()+"%");
 
     }
 
@@ -59,18 +56,16 @@ public class DatatAdapter extends RecyclerView.Adapter<DatatAdapter.ProductViewH
 
     class ProductViewHolder extends RecyclerView.ViewHolder {
 
-        TextView pro_name, weight, sold, delto, ammount, disc;
+        TextView pro_name, weight,  ammount;
 
         public ProductViewHolder(View itemView) {
             super(itemView);
 
             pro_name = itemView.findViewById(R.id.pro_name);
             weight = itemView.findViewById(R.id.pro_weight);
-            sold = itemView.findViewById(R.id.pro_sold);
 
-            delto = itemView.findViewById(R.id.del_to);
             ammount = itemView.findViewById(R.id.pro_amt);
-            disc = itemView.findViewById(R.id.pro_disc);
+
 
 
 
