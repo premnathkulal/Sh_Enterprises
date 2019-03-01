@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void clickMe(View view) {
-        Intent i = new Intent(this,Home_page.class);
+        Intent i = new Intent(this, Login.class);
         startActivity(i);
     }
 }

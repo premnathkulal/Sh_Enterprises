@@ -30,7 +30,7 @@ public class Notes_List extends AppCompatActivity {
 
     //this is the JSON Data URL
     //make sure you are using the correct ip else it will not work
-    public  static  String URL_PRODUCTS ;
+    public  static  String URL_PRODUCTS, pass ;
     public static String ptopic,psubcode;
     private static ProgressDialog progressDialog;
     //a list to store all the products
@@ -44,13 +44,16 @@ public class Notes_List extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notes__list);
-
         Intent i = getIntent();
 
-        URL_PRODUCTS = "https://premnathindia.000webhostapp.com/Api.php";
+        pass = i.getStringExtra("PASS");
+
+        Toast.makeText(this,"HI THIS IS "+pass,Toast.LENGTH_SHORT).show();
+
+        URL_PRODUCTS = "https://premnathindia.000webhostapp.com/Api.php?p1="+pass;
 
 
-        Toast.makeText(this, psubcode, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, URL_PRODUCTS, Toast.LENGTH_SHORT).show();
 
         TextView tvv = findViewById(R.id.textView5);
 
@@ -100,9 +103,7 @@ public class Notes_List extends AppCompatActivity {
                                             product.getString("pro_name"),
                                             product.getString("weight"),
                                             product.getString("total_amount"),
-                                            product.getString("disc"),
-                                            product.getString("deliveryto"),
-                                            product.getString("sold_by")
+                                            product.getString("pro_img_url")
 
                                     ));
                                 }

@@ -17,6 +17,10 @@
             android:label="@string/title_activity_home_page"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Notes_List" />
+
+        <activity android:name=".Login" />
+        <activity android:name=".retailer_list" />
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

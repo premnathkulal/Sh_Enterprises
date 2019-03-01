@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="182dp"
         android:padding="20dp">
 
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="183dp"
-            android:layout_height="102dp"
+            android:layout_width="156dp"
+            android:layout_height="125dp"
             android:layout_alignParentTop="true"
             android:layout_marginStart="0dp"
             android:layout_marginLeft="0dp"
@@ -25,7 +26,7 @@
         <TextView
             android:id="@+id/pro_name"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:layout_marginStart="190dp"
             android:layout_marginLeft="145dp"
             android:text="Apple MacBook Air Core i5 5th Gen - (8 GB/128 GB SSD/Mac OS Sierra)"
@@ -34,36 +35,55 @@
 
         <TextView
             android:id="@+id/pro_weight"
-            android:layout_width="wrap_content"
+            android:layout_width="179dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/pro_name"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_marginStart="190dp"
-            android:layout_marginLeft="145dp"
-            android:layout_marginTop="25dp"
-            android:layout_marginEnd="5dp"
-            android:layout_marginRight="5dp"
+            android:layout_marginStart="187dp"
+            android:layout_marginLeft="187dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginRight="25dp"
             android:text="TextView" />
 
 
         <TextView
             android:id="@+id/pro_amt"
-            android:layout_width="wrap_content"
+            android:layout_width="179dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/pro_weight"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_marginStart="190dp"
-            android:layout_marginLeft="145dp"
-            android:layout_marginTop="25dp"
-            android:layout_marginEnd="5dp"
-            android:layout_marginRight="5dp"
+            android:layout_marginStart="187dp"
+            android:layout_marginLeft="187dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginRight="25dp"
             android:text="TextView" />
+
+
+        <Button
+            android:id="@+id/pro_amt2"
+            android:layout_width="203dp"
+            android:layout_height="56dp"
+            android:layout_below="@+id/pro_amt"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="187dp"
+            android:layout_marginLeft="187dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginBottom="4dp"
+            android:text="ADD TO CART" />
 
 
     </RelativeLayout>

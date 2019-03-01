@@ -84,17 +84,25 @@ public class Home_page extends AppCompatActivity
         if (id == R.id.nav_product) {
 
             Intent i = new Intent(this,Notes_List.class);
+            i.putExtra("PASS","ALL");
             startActivity(i);
 
         } else if (id == R.id.nav_gallery) {
 
+            Intent i = new Intent(this,categories.class);
+            startActivity(i);
+
         } else if (id == R.id.nav_slideshow) {
+
 
         } else if (id == R.id.nav_manage) {
 
         } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {
+
+            Intent i = new Intent(this,retailer_list.class);
+            startActivity(i);
 
         }
 
