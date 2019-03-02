@@ -51,6 +51,7 @@ public class DatatAdapter extends RecyclerView.Adapter<DatatAdapter.ProductViewH
 
 
         holder.pro_name.setText(product.getPro_name());
+        holder.pro_id.setText(product.getPro_id());
         holder.weight.setText("WEIGHT : "+product.getWeight());
         holder.ammount.setText(product.getTotal_amount()+"Rs");
 
@@ -68,7 +69,7 @@ public class DatatAdapter extends RecyclerView.Adapter<DatatAdapter.ProductViewH
 
     class ProductViewHolder extends RecyclerView.ViewHolder {
 
-        TextView pro_name, weight,  ammount;
+        TextView pro_name, weight,  ammount,pro_id;
         ImageView iv;
 
         public ProductViewHolder(View itemView) {
@@ -77,8 +78,9 @@ public class DatatAdapter extends RecyclerView.Adapter<DatatAdapter.ProductViewH
             pro_name = itemView.findViewById(R.id.pro_name);
             weight = itemView.findViewById(R.id.pro_weight);
             ammount = itemView.findViewById(R.id.pro_amt);
+            pro_id = itemView.findViewById(R.id.pro_id);
 
-             iv = itemView.findViewById(R.id.imageView);
+            iv = itemView.findViewById(R.id.imageView);
 
 
 

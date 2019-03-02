@@ -50,7 +50,8 @@ public class Notes_List extends AppCompatActivity {
 
         Toast.makeText(this,"HI THIS IS "+pass,Toast.LENGTH_SHORT).show();
 
-        URL_PRODUCTS = "https://premnathindia.000webhostapp.com/Api.php?p1="+pass;
+        //URL_PRODUCTS = "https://premnathindia.000webhostapp.com/Api.php?p1="+pass;
+        URL_PRODUCTS = "http://192.168.225.25/prem/Api.php?p1="+pass;
 
 
         Toast.makeText(this, URL_PRODUCTS, Toast.LENGTH_SHORT).show();
@@ -71,6 +72,10 @@ public class Notes_List extends AppCompatActivity {
     }
 
         private void loadProducts() {
+
+            prefConfig product = new prefConfig(this);
+            String str = product.read_ret_id();
+            Toast.makeText(this,str,Toast.LENGTH_SHORT).show();
 
             progressDialog = new ProgressDialog(this);
             progressDialog.setMessage("Please wait...");
@@ -100,6 +105,7 @@ public class Notes_List extends AppCompatActivity {
                                     //adding the product to product list
                                     productList.add(new pro_data(
 
+                                            product.getString("pro_id"),
                                             product.getString("pro_name"),
                                             product.getString("weight"),
                                             product.getString("total_amount"),
@@ -133,8 +139,10 @@ public class Notes_List extends AppCompatActivity {
         }
 
     public void downme_ooi(View view) {
-
-
-
+        String ret_id = ((TextView) view).getText().toString();
+        Intent i = new Intent(this,Detailes.class);
+        i.putExtra("pro_id",ret_id);
+        Toast.makeText(this,ret_id,Toast.LENGTH_SHORT).show();
+        startActivity(i);
     }
 }

@@ -37,7 +37,8 @@ public class SubListAdapter extends RecyclerView.Adapter<SubListAdapter.ProductV
     public void onBindViewHolder(ProductViewHolder holder, int position) {
         sub_data product = productList.get(position);
 
-        holder.textViewTitle.setText(product.getRet_id());
+        holder.ret_id.setText(product.getRet_id());
+        holder.ret_name.setText(product.getRet_name());
 
     }
 
@@ -48,12 +49,13 @@ public class SubListAdapter extends RecyclerView.Adapter<SubListAdapter.ProductV
 
     class ProductViewHolder extends RecyclerView.ViewHolder {
 
-        Button textViewTitle;
+        TextView ret_id,ret_name;
 
         public ProductViewHolder(View itemView) {
             super(itemView);
 
-            textViewTitle = itemView.findViewById(R.id.textViewTitle);
+            ret_id = itemView.findViewById(R.id.ret_id);
+            ret_name = itemView.findViewById(R.id.ret_name);
 
         }
     }

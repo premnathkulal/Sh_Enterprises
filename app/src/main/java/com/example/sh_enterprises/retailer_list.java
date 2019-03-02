@@ -30,8 +30,7 @@ public class retailer_list extends AppCompatActivity {
     //this is the JSON Data URL
     //make sure you are using the correct ip else it will not work
 
-
-
+    public static  prefConfig pcg;
     public static  String URL_PRODUCTS ;
     private static ProgressDialog progressDialog;
 
@@ -46,6 +45,7 @@ public class retailer_list extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.retailer_list);
         Intent i = getIntent();
+        pcg = new prefConfig(this);
 
          TextView tv = findViewById(R.id.textView5);
          String tvt = tv.getText().toString();
@@ -127,10 +127,12 @@ public class retailer_list extends AppCompatActivity {
 
     public void callMe(View view) {
 
-       // Intent i = new Intent(retailer_list.this,Notes_List.class);
-        //String name = ((Button) view).getText().toString();
-        //i.putExtra("SUBJECTCODE",name);
-        //startActivity(i);
+        String ret_id = ((TextView) view).getText().toString();
+        pcg.ret_id(ret_id);
+
+        Intent i = new Intent(this,Notes_List.class);
+        i.putExtra("PASS","ALL");
+        startActivity(i);
 
     }
 }

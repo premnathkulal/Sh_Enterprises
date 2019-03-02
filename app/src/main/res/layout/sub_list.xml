@@ -9,13 +9,39 @@
         android:layout_height="wrap_content"
         android:padding="8dp">
 
-        <Button
+
+        <android.support.v7.widget.CardView
             android:id="@+id/textViewTitle"
-            android:layout_marginTop="15sp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="SEMISTER"
-            android:onClick="callMe"/>
+            android:layout_height="50sp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/imageView"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <TextView
+                android:id="@+id/ret_id"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:onClick="callMe"
+                android:text="4.7"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"
+
+               />
+
+            <TextView
+
+                android:id="@+id/ret_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimaryDark"
+                android:gravity="center"
+                android:text="DOWNLOAD"
+                android:textStyle="bold" />
+
+        </android.support.v7.widget.CardView>
 
 
     </RelativeLayout>
