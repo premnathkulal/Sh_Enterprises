@@ -131,7 +131,8 @@ public class retailer_list extends AppCompatActivity {
         pcg.ret_id(ret_id);
 
         Intent i = new Intent(this,Notes_List.class);
-        i.putExtra("PASS","ALL");
+        i.putExtra("PASS1","ALL");
+        i.putExtra("PASS2","ALL");
         startActivity(i);
 
     }

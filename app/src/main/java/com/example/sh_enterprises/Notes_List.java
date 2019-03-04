@@ -30,7 +30,7 @@ public class Notes_List extends AppCompatActivity {
 
     //this is the JSON Data URL
     //make sure you are using the correct ip else it will not work
-    public  static  String URL_PRODUCTS, pass ;
+    public  static  String URL_PRODUCTS, pass1,pass2 ;
     public static String ptopic,psubcode;
     private static ProgressDialog progressDialog;
     //a list to store all the products
@@ -46,12 +46,13 @@ public class Notes_List extends AppCompatActivity {
         setContentView(R.layout.activity_notes__list);
         Intent i = getIntent();
 
-        pass = i.getStringExtra("PASS");
+        pass1 = i.getStringExtra("PASS1");
+        pass2 = i.getStringExtra("PASS2");
 
-        Toast.makeText(this,"HI THIS IS "+pass,Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this,"HI THIS IS "+pass,Toast.LENGTH_SHORT).show();
 
         //URL_PRODUCTS = "https://premnathindia.000webhostapp.com/Api.php?p1="+pass;
-        URL_PRODUCTS = "http://192.168.225.25/prem/Api.php?p1="+pass;
+        URL_PRODUCTS = "http://192.168.225.25/prem/Api.php?p1="+pass1+"&p2="+pass2;
 
 
         Toast.makeText(this, URL_PRODUCTS, Toast.LENGTH_SHORT).show();
@@ -109,7 +110,12 @@ public class Notes_List extends AppCompatActivity {
                                             product.getString("pro_name"),
                                             product.getString("weight"),
                                             product.getString("total_amount"),
-                                            product.getString("pro_img_url")
+                                            product.getString("pro_img_url"),
+
+                                            product.getString("base_amount"),
+                                            product.getString("disc"),
+                                            product.getString("brands"),
+                                            product.getString("categories")
 
                                     ));
                                 }
@@ -139,10 +145,9 @@ public class Notes_List extends AppCompatActivity {
         }
 
     public void downme_ooi(View view) {
-        String ret_id = ((TextView) view).getText().toString();
+        String pro_id = ((TextView) view).getText().toString();
         Intent i = new Intent(this,Detailes.class);
-        i.putExtra("pro_id",ret_id);
-        Toast.makeText(this,ret_id,Toast.LENGTH_SHORT).show();
+        i.putExtra("pro_id",pro_id);
         startActivity(i);
     }
 }

@@ -33,7 +33,8 @@ public class categories extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(categories.this,Notes_List.class);
-                i.putExtra("PASS","Biscuit");
+                i.putExtra("PASS1","Biscuit");
+                i.putExtra("PASS2","cat");
                 startActivity(i);
             }
         });
@@ -42,7 +43,8 @@ public class categories extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(categories.this,Notes_List.class);
-                i.putExtra("PASS","Candy");
+                i.putExtra("PASS1","Candy");
+                i.putExtra("PASS2","cat");
                 startActivity(i);
             }
         });
@@ -51,7 +53,8 @@ public class categories extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(categories.this,Notes_List.class);
-                i.putExtra("PASS","Bubble");
+                i.putExtra("PASS1","Bubble");
+                i.putExtra("PASS2","cat");
                 startActivity(i);
             }
         });
@@ -60,7 +63,8 @@ public class categories extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(categories.this,Notes_List.class);
-                i.putExtra("PASS","Chips");
+                i.putExtra("PASS1","Chips");
+                i.putExtra("PASS2","cat"); i.putExtra("PASS2","cat");
                 startActivity(i);
             }
         });
@@ -69,7 +73,8 @@ public class categories extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(categories.this,Notes_List.class);
-                i.putExtra("PASS","Chocolate");
+                i.putExtra("PASS1","Chocolate");
+                i.putExtra("PASS2","cat");
                 startActivity(i);
             }
         });
@@ -78,7 +83,8 @@ public class categories extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(categories.this,Notes_List.class);
-                i.putExtra("PASS","Cofee");
+                i.putExtra("PASS1","Cofee");
+                i.putExtra("PASS2","cat");
                 startActivity(i);
             }
         });
@@ -87,7 +93,8 @@ public class categories extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(categories.this,Notes_List.class);
-                i.putExtra("PASS","Fruit_Juce");
+                i.putExtra("PASS1","Fruit_Juce");
+                i.putExtra("PASS2","cat");
                 startActivity(i);
             }
         });
@@ -96,7 +103,8 @@ public class categories extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(categories.this,Notes_List.class);
-                i.putExtra("PASS","Ghee");
+                i.putExtra("PASS1","Ghee");
+                i.putExtra("PASS2","cat");
                 startActivity(i);
             }
         });
@@ -105,7 +113,8 @@ public class categories extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(categories.this,Notes_List.class);
-                i.putExtra("PASS","Ground_Spice_Powder");
+                i.putExtra("PASS1","Ground_Spice_Powder");
+                i.putExtra("PASS2","cat");
                 startActivity(i);
             }
         });
