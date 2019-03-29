@@ -2,11 +2,12 @@ package com.example.sh_enterprises;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.CardView;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -110,12 +111,8 @@ public class Notes_List extends AppCompatActivity {
                                             product.getString("pro_name"),
                                             product.getString("weight"),
                                             product.getString("total_amount"),
-                                            product.getString("pro_img_url"),
+                                            product.getString("pro_img_url")
 
-                                            product.getString("base_amount"),
-                                            product.getString("disc"),
-                                            product.getString("brands"),
-                                            product.getString("categories")
 
                                     ));
                                 }
@@ -150,4 +147,54 @@ public class Notes_List extends AppCompatActivity {
         i.putExtra("pro_id",pro_id);
         startActivity(i);
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.sort_by, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.sort_by_brand) {
+
+            Intent i = new Intent(this,categories.class);
+            startActivity(i);
+
+            return true;
+        }
+        if(id == R.id.change_retailer){
+
+            Intent i = new Intent(this,retailer_list.class);
+            startActivity(i);
+
+            return  true;
+        }
+
+        if(id == R.id.home){
+
+            Intent i = new Intent(this,Home_page.class);
+            startActivity(i);
+
+            return  true;
+        }
+        if(id == R.id.goto_cart){
+
+            Intent i = new Intent(this,Home_page.class);
+            startActivity(i);
+
+            return  true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+
 }

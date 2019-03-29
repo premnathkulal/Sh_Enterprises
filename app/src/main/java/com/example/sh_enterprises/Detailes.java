@@ -37,8 +37,8 @@ public class Detailes extends AppCompatActivity {
     //make sure you are using the correct ip else it will not work
     public  static  String URL_PRODUCTS, pass1,pass2 ;
     public static String ptopic,psubcode;
-    public static  String nIntFromET;
     private static ProgressDialog progressDialog;
+    public static String amount ;
     //a list to store all the products
     List<pro_data> productList;
 
@@ -66,13 +66,11 @@ public class Detailes extends AppCompatActivity {
 
         productList = new ArrayList<>();
 
-        EditText ed = findViewById(R.id.meChoice);
-        nIntFromET = ed.getText().toString();
-
 
         pcg = new prefConfig(this);
         apiInterface = apiclient.getApiclient().create(ApiInterface.class);
         loadProducts();
+
     }
 
     private void loadProducts() {
@@ -132,6 +130,7 @@ public class Detailes extends AppCompatActivity {
 
 
                                 st = product.getString("total_amount");
+                                amount = st;
                                 text = "<font color=#0f0104>MASS AMOUNT : Rs </font><font color=#ff4c33>"+st+"  per piece </font>";
                                 c.setText(Html.fromHtml(text));
 
@@ -182,9 +181,13 @@ public class Detailes extends AppCompatActivity {
         String sup_id = pcg.readEmail();
         String ret_id = pcg.read_ret_id();
         String item_id = pass1;
-        String ammount = nIntFromET;
 
-        Call<cart_add> call  = Detailes.apiInterface.performCart(sup_id,ret_id,item_id,ammount);
+        EditText ed = findViewById(R.id.meChoice);
+        int quantity = Integer.parseInt(ed.getText().toString());
+        int finamt = quantity * Integer.parseInt(amount);
+
+
+        Call<cart_add> call  = Detailes.apiInterface.performCart(sup_id,ret_id,item_id,finamt,quantity);
 
         call.enqueue(new Callback<cart_add>() {
             @Override

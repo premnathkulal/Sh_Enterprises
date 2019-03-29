@@ -2,33 +2,23 @@ package com.example.sh_enterprises;
 
 
 import android.content.Context;
-import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.bumptech.glide.Glide;
 import com.squareup.picasso.Picasso;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.util.List;
 
-public class DatatAdapter extends RecyclerView.Adapter<DatatAdapter.ProductViewHolder> {
+public class confirm_ord extends RecyclerView.Adapter<confirm_ord.ProductViewHolder> {
     private Context mCtx;
-    private List<pro_data> productList;
-    public TextView textv;
+    private List<cart_data> productList;
     public String topic;
 
-    public DatatAdapter(Context mCtx, List<pro_data> productList ,String str) {
+    public confirm_ord(Context mCtx, List<cart_data> productList ,String str) {
         this.mCtx = mCtx;
         this.productList = productList;
         this.topic = str;
@@ -37,9 +27,7 @@ public class DatatAdapter extends RecyclerView.Adapter<DatatAdapter.ProductViewH
     @Override
     public ProductViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(mCtx);
-        View view = inflater.inflate(R.layout.data_list, null);
-
-
+        View view = inflater.inflate(R.layout.cart_data_list, null);
         return new ProductViewHolder(view);
 
     }
@@ -47,18 +35,17 @@ public class DatatAdapter extends RecyclerView.Adapter<DatatAdapter.ProductViewH
 
     @Override
     public void onBindViewHolder(ProductViewHolder holder, int position) {
-        pro_data product = productList.get(position);
 
-
-        holder.pro_name.setText(product.getPro_name());
-        holder.pro_id.setText(product.getPro_id());
-        holder.weight.setText("WEIGHT : "+product.getWeight());
-        holder.ammount.setText(product.getTotal_amount()+"Rs");
+        cart_data product = productList.get(position);
+        holder.pro_name.setText(product.getItem_id());
+        holder.pro_id.setText(product.getSup_id());
+        holder.weight.setText(product.getRet_id());
+        holder.ammount.setText(product.getSum_amt());
 
 
         //String imageUrl = "https://premnathindia.000webhostapp.com/pro_images/tamanna.jpeg";
 
-        Picasso.get().load(product.getPro_url()).into(holder.iv);
+        Picasso.get().load(product.getIte_url()).into(holder.iv);
 
     }
 
@@ -66,6 +53,7 @@ public class DatatAdapter extends RecyclerView.Adapter<DatatAdapter.ProductViewH
     public int getItemCount() {
         return productList.size();
     }
+
 
     class ProductViewHolder extends RecyclerView.ViewHolder {
 
@@ -82,11 +70,6 @@ public class DatatAdapter extends RecyclerView.Adapter<DatatAdapter.ProductViewH
 
             iv = itemView.findViewById(R.id.imageView);
 
-
-
-
         }
     }
-
-
 }

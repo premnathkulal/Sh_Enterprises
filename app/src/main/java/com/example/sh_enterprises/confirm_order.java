@@ -2,12 +2,11 @@ package com.example.sh_enterprises;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -24,36 +23,41 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-public class retailer_list extends AppCompatActivity {
+public class confirm_order extends AppCompatActivity {
+
 
 
     //this is the JSON Data URL
     //make sure you are using the correct ip else it will not work
-
-    public static  prefConfig pcg;
-    public static  String URL_PRODUCTS ;
+    public  static  String URL_PRODUCTS, pass1,pass2 ;
+    public static String ptopic,psubcode;
     private static ProgressDialog progressDialog;
-
     //a list to store all the products
-    List<sub_data> productList;
+    List<cart_data> productList;
 
     //the recyclerview
     RecyclerView recyclerView;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.retailer_list);
+        setContentView(R.layout.activity_notes__list);
         Intent i = getIntent();
-        pcg = new prefConfig(this);
 
-         TextView tv = findViewById(R.id.textView5);
-         String tvt = tv.getText().toString();
+        pass1 = "1";
+
+        //Toast.makeText(this,"HI THIS IS "+pass,Toast.LENGTH_SHORT).show();
+
+        //URL_PRODUCTS = "https://premnathindia.000webhostapp.com/Api.php?p1="+pass;
+        URL_PRODUCTS = "http://192.168.225.25/prem/conf_order.php?p1="+pass1;
 
 
-        URL_PRODUCTS = "http://192.168.225.25/prem/ret_list.php";
+        Toast.makeText(this, URL_PRODUCTS, Toast.LENGTH_SHORT).show();
 
+        TextView tvv = findViewById(R.id.textView5);
 
+        //getting the recyclerview from xml
         recyclerView = findViewById(R.id.recylcerView);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -64,23 +68,19 @@ public class retailer_list extends AppCompatActivity {
         //this method will fetch and parse json
         //to display it in recyclerview
         loadProducts();
-
     }
 
     private void loadProducts() {
 
+        prefConfig product = new prefConfig(this);
+        String str = product.read_ret_id();
+        Toast.makeText(this,str,Toast.LENGTH_SHORT).show();
 
         progressDialog = new ProgressDialog(this);
         progressDialog.setMessage("Please wait...");
         progressDialog.show();
 
-        /*
-         * Creating a String Request
-         * The request type is GET defined by first parameter
-         * The URL is defined in the second parameter
-         * Then we have a Response Listener and a Error Listener
-         * In response listener we will get the JSON response as a String
-         * */
+
         StringRequest stringRequest = new StringRequest(Request.Method.GET, URL_PRODUCTS,
                 new Response.Listener<String>() {
                     @Override
@@ -96,15 +96,19 @@ public class retailer_list extends AppCompatActivity {
                                 JSONObject product = array.getJSONObject(i);
 
                                 //adding the product to product list
-                                productList.add(new sub_data(
-                                        product.getString("UID"),
-                                        product.getString("name")
+                                productList.add(new cart_data(
+
+                                        product.getString("sup_id"),
+                                        product.getString("ret_id"),
+                                        product.getString("item_id"),
+                                        product.getString("amount"),
+                                        product.getString("url")
+
                                 ));
                             }
 
                             //creating adapter object and setting it to recyclerview
-                            SubListAdapter adapter = new SubListAdapter(retailer_list.this, productList);
-
+                            confirm_ord adapter = new confirm_ord(confirm_order.this, productList, ptopic);
                             recyclerView.setAdapter(adapter);
 
                             progressDialog.dismiss();
@@ -113,6 +117,7 @@ public class retailer_list extends AppCompatActivity {
                             e.printStackTrace();
                         }
                     }
+
                 },
                 new Response.ErrorListener() {
                     @Override
@@ -123,17 +128,14 @@ public class retailer_list extends AppCompatActivity {
 
         //adding our stringrequest to queue
         Volley.newRequestQueue(this).add(stringRequest);
+
     }
 
-    public void callMe(View view) {
-
-        String ret_id = ((TextView) view).getText().toString();
-        pcg.ret_id(ret_id);
-
-        Intent i = new Intent(this,Notes_List.class);
-        i.putExtra("PASS1","ALL");
-        i.putExtra("PASS2","ALL");
+    public void downme_ooi(View view) {
+        String pro_id = ((TextView) view).getText().toString();
+        Intent i = new Intent(this,Detailes.class);
+        i.putExtra("pro_id",pro_id);
         startActivity(i);
-
     }
+
 }

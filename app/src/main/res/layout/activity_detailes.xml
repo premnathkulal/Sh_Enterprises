@@ -179,7 +179,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:onClick="addToCart"
-                android:text="@string/action_sign_in"
+                android:text="ADD TO CART"
                 android:textStyle="bold" />
 
             <TextView

@@ -83,13 +83,12 @@ public class Home_page extends AppCompatActivity
 
         if (id == R.id.nav_product) {
 
-            Intent i = new Intent(this,Notes_List.class);
-            i.putExtra("PASS","ALL");
+            Intent i = new Intent(this,retailer_list.class);
             startActivity(i);
 
         } else if (id == R.id.nav_gallery) {
 
-            Intent i = new Intent(this,categories.class);
+            Intent i = new Intent(this,confirm_order.class);
             startActivity(i);
 
         } else if (id == R.id.nav_slideshow) {
@@ -101,8 +100,6 @@ public class Home_page extends AppCompatActivity
 
         } else if (id == R.id.nav_send) {
 
-            Intent i = new Intent(this,retailer_list.class);
-            startActivity(i);
 
         }
 
