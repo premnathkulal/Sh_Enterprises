@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/sort_by_brand"
+        android:orderInCategory="100"
+        android:title="SORT BY CATEGORIES"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/change_retailer"
+        android:orderInCategory="100"
+        android:title="CHANGE RETAILER"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/goto_cart"
+        android:orderInCategory="100"
+        android:title="MOVE TO CART"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/home"
+        android:orderInCategory="100"
+        android:title="HOME"
+        app:showAsAction="never" />
+
+</menu>
