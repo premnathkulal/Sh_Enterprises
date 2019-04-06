@@ -26,7 +26,7 @@
                 android:layout_height="match_parent"
                 android:onClick="callMe"
                 android:text="4.7"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="#000000"
                 android:textStyle="bold"
 
                />
@@ -36,7 +36,7 @@
                 android:id="@+id/ret_name"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/colorPrimaryDark"
+                android:background="#ffffe0"
                 android:gravity="center"
                 android:text="DOWNLOAD"
                 android:textStyle="bold" />

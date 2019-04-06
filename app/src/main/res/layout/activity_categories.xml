@@ -54,11 +54,11 @@ tools:context=".categories">
 
                 <ImageView
                     android:id="@+id/imageView1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="83dp"
+                    android:layout_height="70dp"
                     android:layout_gravity="center"
                     android:layout_marginTop="0dp"
-                    android:src="@mipmap/ic_launcher" />
+                    android:src="@drawable/bisc" />
 
                 <TextView
                     android:id="@+id/textView1"
@@ -80,11 +80,11 @@ tools:context=".categories">
 
                 <ImageView
                     android:id="@+id/imageView2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="93dp"
+                    android:layout_height="80dp"
                     android:layout_gravity="center"
                     android:layout_marginTop="0dp"
-                    android:src="@mipmap/ic_launcher" />
+                    android:src="@drawable/candy" />
 
                 <TextView
                     android:id="@+id/textView2"
@@ -105,11 +105,11 @@ tools:context=".categories">
 
                 <ImageView
                     android:id="@+id/imageView3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="94dp"
+                    android:layout_height="84dp"
                     android:layout_gravity="center"
                     android:layout_marginTop="0dp"
-                    android:src="@mipmap/ic_launcher" />
+                    android:src="@drawable/chiwi" />
 
                 <TextView
                     android:id="@+id/textView03"
@@ -131,11 +131,11 @@ tools:context=".categories">
 
                 <ImageView
                     android:id="@+id/imageView4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="90dp"
+                    android:layout_height="73dp"
                     android:layout_gravity="center"
                     android:layout_marginTop="0dp"
-                    android:src="@mipmap/ic_launcher" />
+                    android:src="@drawable/chip" />
 
                 <TextView
                     android:id="@+id/textView4"
@@ -157,11 +157,11 @@ tools:context=".categories">
 
                 <ImageView
                     android:id="@+id/imageView5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="91dp"
+                    android:layout_height="74dp"
                     android:layout_gravity="center"
                     android:layout_marginTop="0dp"
-                    android:src="@mipmap/ic_launcher" />
+                    android:src="@drawable/choc" />
 
                 <TextView
                     android:id="@+id/textView5"
@@ -182,11 +182,11 @@ tools:context=".categories">
 
                 <ImageView
                     android:id="@+id/imageView6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="94dp"
+                    android:layout_height="83dp"
                     android:layout_gravity="center"
                     android:layout_marginTop="0dp"
-                    android:src="@mipmap/ic_launcher" />
+                    android:src="@drawable/cofee" />
 
                 <TextView
                     android:id="@+id/textView6"
@@ -207,11 +207,11 @@ tools:context=".categories">
 
                 <ImageView
                     android:id="@+id/imageView7"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="88dp"
+                    android:layout_height="79dp"
                     android:layout_gravity="center"
                     android:layout_marginTop="0dp"
-                    android:src="@mipmap/ic_launcher" />
+                    android:src="@drawable/juce" />
 
                 <TextView
                     android:id="@+id/textView7"
@@ -233,11 +233,11 @@ tools:context=".categories">
 
                 <ImageView
                     android:id="@+id/imageView8"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="88dp"
+                    android:layout_height="79dp"
                     android:layout_gravity="center"
                     android:layout_marginTop="0dp"
-                    android:src="@mipmap/ic_launcher" />
+                    android:src="@drawable/ghee" />
 
                 <TextView
                     android:id="@+id/textView8"

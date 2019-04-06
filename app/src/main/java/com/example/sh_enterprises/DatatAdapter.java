@@ -2,24 +2,15 @@ package com.example.sh_enterprises;
 
 
 import android.content.Context;
-import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.bumptech.glide.Glide;
 import com.squareup.picasso.Picasso;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.util.List;
 
 public class DatatAdapter extends RecyclerView.Adapter<DatatAdapter.ProductViewHolder> {
@@ -28,7 +19,7 @@ public class DatatAdapter extends RecyclerView.Adapter<DatatAdapter.ProductViewH
     public TextView textv;
     public String topic;
 
-    public DatatAdapter(Context mCtx, List<pro_data> productList ,String str) {
+    public DatatAdapter(Context mCtx, List<pro_data> productList , String str) {
         this.mCtx = mCtx;
         this.productList = productList;
         this.topic = str;

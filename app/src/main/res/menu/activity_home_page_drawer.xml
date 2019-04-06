@@ -7,31 +7,26 @@
         <item
             android:id="@+id/nav_product"
             android:icon="@drawable/ic_menu_gallery"
-            android:title="BUY NOW" />
+            android:title="SHOP NOW" />
         <item
             android:id="@+id/nav_gallery"
             android:icon="@drawable/ic_menu_gallery"
-            android:title="MOVE TO CART" />
+            android:title="YOUR PROFILE" />
         <item
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="Slideshow" />
-        <item
-            android:id="@+id/nav_manage"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="Tools" />
+            android:title="ABOUT SH_ENTERPRISES" />
+
     </group>
 
-    <item android:title="Communicate">
+    <item android:title="">
         <menu>
-            <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_gallery"
-                android:title="Share" />
+
             <item
                 android:id="@+id/nav_send"
                 android:icon="@drawable/ic_menu_gallery"
-                android:title="Send" />
+                android:title="Logout" />
+
         </menu>
     </item>
 

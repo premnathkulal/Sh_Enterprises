@@ -11,7 +11,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".confirm_order"></activity>
         <activity android:name=".Detailes" />
         <activity android:name=".categories" />
         <activity
@@ -19,6 +18,7 @@
             android:label="@string/title_activity_home_page"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Notes_List" />
+        <activity android:name=".cart_data" />
         <activity android:name=".Login" />
         <activity android:name=".retailer_list" />
         <activity android:name=".MainActivity">

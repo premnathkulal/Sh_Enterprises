@@ -187,7 +187,7 @@ public class Notes_List extends AppCompatActivity {
         }
         if(id == R.id.goto_cart){
 
-            Intent i = new Intent(this,Home_page.class);
+            Intent i = new Intent(this,cart_data.class);
             startActivity(i);
 
             return  true;

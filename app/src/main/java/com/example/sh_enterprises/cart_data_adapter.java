@@ -13,12 +13,14 @@ import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-public class confirm_ord extends RecyclerView.Adapter<confirm_ord.ProductViewHolder> {
+public class cart_data_adapter extends RecyclerView.Adapter<cart_data_adapter.ProductViewHolder> {
     private Context mCtx;
-    private List<cart_data> productList;
+    private List<cart_data_return> productList;
+    public TextView textv;
     public String topic;
 
-    public confirm_ord(Context mCtx, List<cart_data> productList ,String str) {
+
+    public cart_data_adapter(Context mCtx, List<cart_data_return> productList , String str) {
         this.mCtx = mCtx;
         this.productList = productList;
         this.topic = str;
@@ -28,6 +30,8 @@ public class confirm_ord extends RecyclerView.Adapter<confirm_ord.ProductViewHol
     public ProductViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(mCtx);
         View view = inflater.inflate(R.layout.cart_data_list, null);
+
+
         return new ProductViewHolder(view);
 
     }
@@ -35,17 +39,17 @@ public class confirm_ord extends RecyclerView.Adapter<confirm_ord.ProductViewHol
 
     @Override
     public void onBindViewHolder(ProductViewHolder holder, int position) {
+        cart_data_return product = productList.get(position);
 
-        cart_data product = productList.get(position);
-        holder.pro_name.setText(product.getItem_id());
-        holder.pro_id.setText(product.getSup_id());
-        holder.weight.setText(product.getRet_id());
-        holder.ammount.setText(product.getSum_amt());
+        holder.pro_name.setText(product.getPro_name());
+        holder.weight.setText("QUANTITY : "+product.getQnty());
+        holder.ammount.setText(product.getAmmount()+"Rs");
+        holder.pro_id.setText(product.getId());
 
 
         //String imageUrl = "https://premnathindia.000webhostapp.com/pro_images/tamanna.jpeg";
 
-        Picasso.get().load(product.getIte_url()).into(holder.iv);
+        Picasso.get().load(product.getPro_img_url()).into(holder.iv);
 
     }
 
@@ -53,7 +57,6 @@ public class confirm_ord extends RecyclerView.Adapter<confirm_ord.ProductViewHol
     public int getItemCount() {
         return productList.size();
     }
-
 
     class ProductViewHolder extends RecyclerView.ViewHolder {
 
@@ -69,6 +72,7 @@ public class confirm_ord extends RecyclerView.Adapter<confirm_ord.ProductViewHol
             pro_id = itemView.findViewById(R.id.pro_id);
 
             iv = itemView.findViewById(R.id.imageView);
+
 
         }
     }

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
     android:orientation="vertical"
-    tools:context=".confirm_order">
+    tools:context=".cart_data">
 
     <ScrollView
         android:id="@+id/Notes"
@@ -25,7 +25,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="60sp"
                 android:gravity="center"
-                android:text="CONFIRM ORDER"
+                android:text="YOUR CART"
                 android:textColor="@color/colorAccent"
                 android:textSize="25sp"
                 android:textStyle="bold"
@@ -34,21 +34,26 @@
                 tools:layout_editor_absoluteX="87dp"
                 tools:layout_editor_absoluteY="355dp" />
 
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/recylcerView"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recylcerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="745dp"
+        tools:layout_editor_absoluteY="-51dp" />
+
+
+
+            <Button
+                android:id="@+id/button2"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                tools:layout_editor_absoluteX="745dp"
-                tools:layout_editor_absoluteY="-51dp" />
+                android:layout_height="wrap_content"
+                android:text="CONFIRM ORDER"
+                android:onClick="addToCart"/>
+
 
         </LinearLayout>
 
     </ScrollView>
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TextView" />
 
 </LinearLayout>

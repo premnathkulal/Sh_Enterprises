@@ -25,7 +25,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="60sp"
                 android:gravity="center"
-                android:text="DEALS"
+                android:text="AVAILABLE PRODUCTS"
                 android:textColor="@color/colorAccent"
                 android:textSize="25sp"
                 android:textStyle="bold"

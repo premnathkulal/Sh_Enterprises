@@ -102,7 +102,7 @@
                 android:layout_height="match_parent"
                 android:background="@color/colorPrimaryDark"
                 android:gravity="center"
-                android:text="SELECT"
+                android:text="ADDD TO CRT"
                 android:textStyle="bold" />
 
         </android.support.v7.widget.CardView>
