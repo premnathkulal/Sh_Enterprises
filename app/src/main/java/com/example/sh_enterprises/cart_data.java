@@ -58,7 +58,7 @@ public class cart_data extends AppCompatActivity {
         pass1 = pcg.read_ret_id();
         pass2 = pcg.readEmail();
 
-        URL_PRODUCTS = "http://192.168.225.25/prem/cart_data.php?p1="+pass1+"&p2="+pass2;
+        URL_PRODUCTS = "https://premnathindia.000webhostapp.com/prem/cart_data.php?p1="+pass1+"&p2="+pass2;
 
         apiInterface = apiclient.getApiclient().create(ApiInterface.class);
 

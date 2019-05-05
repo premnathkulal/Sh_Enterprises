@@ -4,7 +4,8 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class apiclient {
-    public static  final  String BASE_URL="http://192.168.225.25/prem/";
+    //public static  final  String BASE_URL="http://192.168.225.25/prem/";
+    public static  final  String BASE_URL="https://premnathindia.000webhostapp.com/prem/";
     public static Retrofit retrofit = null;
 
     public  static  Retrofit getApiclient(){

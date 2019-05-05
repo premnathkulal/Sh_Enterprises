@@ -59,7 +59,7 @@ public class Detailes extends AppCompatActivity {
         //Toast.makeText(this,"HI THIS IS "+pass,Toast.LENGTH_SHORT).show();
 
         //URL_PRODUCTS = "https://premnathindia.000webhostapp.com/Api.php?p1="+pass;
-        URL_PRODUCTS = "http://192.168.225.25/prem/Api.php?p1="+pass1+"&p2=det";
+        URL_PRODUCTS = "https://premnathindia.000webhostapp.com/prem/Api.php?p1="+pass1+"&p2=det";
 
 
         Toast.makeText(this, URL_PRODUCTS, Toast.LENGTH_SHORT).show();

@@ -53,7 +53,7 @@ public class Notes_List extends AppCompatActivity {
         //Toast.makeText(this,"HI THIS IS "+pass,Toast.LENGTH_SHORT).show();
 
         //URL_PRODUCTS = "https://premnathindia.000webhostapp.com/Api.php?p1="+pass;
-        URL_PRODUCTS = "http://192.168.225.25/prem/Api.php?p1="+pass1+"&p2="+pass2;
+        URL_PRODUCTS = "https://premnathindia.000webhostapp.com/prem/Api.php?p1="+pass1+"&p2="+pass2;
 
 
         Toast.makeText(this, URL_PRODUCTS, Toast.LENGTH_SHORT).show();
