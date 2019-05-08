@@ -1,2 +1,2 @@
 # Sh_Enterprises
-project under proces
+project under process
