@@ -78,16 +78,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="@string/action_sign_in"
+                android:text="SIGN IN"
                 android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/reg_txt"
-                android:layout_width="match_parent"
-                android:layout_height="60sp"
-                android:text="REGITER"
-                android:textColor="#F72E72"
-                android:gravity="center"/>
 
         </LinearLayout>
     </ScrollView>

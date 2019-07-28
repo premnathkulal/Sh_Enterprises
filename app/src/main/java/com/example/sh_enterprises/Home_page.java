@@ -111,4 +111,5 @@ public class Home_page extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
 }

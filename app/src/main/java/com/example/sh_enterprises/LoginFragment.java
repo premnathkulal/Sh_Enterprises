@@ -53,12 +53,6 @@ public class LoginFragment extends Fragment {
             }
         });
 
-        RegText.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                   // loginFormActivityListener.performRegister();
-            }
-        });
         return  view;
     }
 

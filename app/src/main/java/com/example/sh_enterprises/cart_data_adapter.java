@@ -9,8 +9,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.squareup.picasso.Picasso;
-
 import java.util.List;
 
 public class cart_data_adapter extends RecyclerView.Adapter<cart_data_adapter.ProductViewHolder> {
@@ -49,7 +47,7 @@ public class cart_data_adapter extends RecyclerView.Adapter<cart_data_adapter.Pr
 
         //String imageUrl = "https://premnathindia.000webhostapp.com/pro_images/tamanna.jpeg";
 
-        Picasso.get().load(product.getPro_img_url()).into(holder.iv);
+        //Picasso.get().load(product.getPro_img_url()).into(holder.iv);
 
     }
 

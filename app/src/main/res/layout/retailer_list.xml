@@ -46,20 +46,8 @@
         tools:layout_editor_absoluteY="-51dp" />
 
 
-            <ImageView
-                android:id="@+id/imageView1"
-                android:layout_width="match_parent"
-                android:layout_height="180sp"
-                android:src="@mipmap/ic_launcher"
-                android:layout_marginTop="30sp"
-                android:layout_gravity="center"/>
-
-
         </LinearLayout>
 
     </ScrollView>
-
-
-
 
 </LinearLayout>
